@@ -9,20 +9,20 @@ class App extends Component {
     super(props);
 
     this.state = {
-      color: null
+      color: "orange"
     }
   }
 
   changeColor = (event) => {
-    this.setState((prevState) => {
-      let changedColor = prevState.color;
+    this.setState(() => {
+      let changedColor = this.state.color;
 
       if(event === 'red') {
-        console.log('Kolor red')
+        changedColor = "red";
       } else if (event === 'blue') {
-        console.log('Kolor blue')
+        changedColor = "blue"
       } else {
-        console.log('Kolor green')
+        changedColor = "green"
       }
 
       return ({
@@ -39,7 +39,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Title Color App</h1>
         </header>
-        <Title />
+        <Title Color={this.state.color}/>
         <ButtonPanel changeColor={this.changeColor}/>
       </div>
     );
