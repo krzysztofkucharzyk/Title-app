@@ -1,0 +1,35 @@
+.btn {
+    border: 1px solid #000;
+    padding: 10px 15px;
+    color: #fff;
+    margin: 0px 10px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.r {
+    background-color: red;
+}
+
+.r:hover {
+    background-color: rgb(165, 0, 0) ;
+}
+
+.b {
+    background-color: blue;
+}
+
+.b:hover {
+    background-color: rgb(0, 0, 156);
+}
+
+.g {
+    background-color: green;
+}
+
+.g:hover {
+    background-color: rgb(0, 80, 0);
+}
