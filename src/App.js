@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import './App.css';
 import ButtonPanel from './ButtonPanel';
 import Title from './Title';
+import './Title.css';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
   }
 
   changeColor = (event) => {
+
     this.setState(() => {
       let changedColor = this.state.color;
 
@@ -28,6 +30,7 @@ class App extends Component {
       return ({
         color: changedColor
       })
+           
 
     });
   }
@@ -39,7 +42,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Title Color App</h1>
         </header>
-        <Title Color={this.state.color}/>
+        <Title color={this.state.color}/>
         <ButtonPanel changeColor={this.changeColor}/>
       </div>
     );
